@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -85,6 +86,7 @@ public class ProfileActivity extends AppCompatActivity {
         mProgressDialog.setMessage("請稍待片刻");
         mProgressDialog.setCanceledOnTouchOutside(false);
         mProgressDialog.show();
+
 
         mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(user_ID);
         mFriendReqDatabase = FirebaseDatabase.getInstance().getReference().child("Friend_req");
@@ -333,7 +335,6 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
-        // 取消好友還沒做
 
 
 
